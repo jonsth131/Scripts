@@ -4,7 +4,8 @@ $GeneralTools = @(
     'firefox',
     'microsoft-windows-terminal',
     '7zip',
-    'notepadplusplus'
+    'notepadplusplus',
+    'jre8'
 )
 
 $DevTools = @(
@@ -18,7 +19,9 @@ $DevTools = @(
     'azure-functions-core-tools',
     'microsoftazurestorageexplorer',
     'azure-cosmosdb-emulator',
-    'docker-desktop'
+    'docker-desktop',
+    'nodejs',
+    'yarn'
 )
 
 $SecurityTools = @(
