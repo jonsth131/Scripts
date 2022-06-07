@@ -2,7 +2,6 @@ $GeneralTools = @(
     'cmder',
     'googlechrome',
     'firefox',
-    'microsoft-windows-terminal',
     '7zip',
     'notepadplusplus',
     'jre8'
