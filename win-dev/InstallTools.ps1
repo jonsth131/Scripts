@@ -3,8 +3,7 @@ $GeneralTools = @(
     'googlechrome',
     'firefox',
     '7zip',
-    'notepadplusplus',
-    'jre8'
+    'notepadplusplus'
 )
 
 $DevTools = @(
