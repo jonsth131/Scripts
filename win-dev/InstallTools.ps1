@@ -50,8 +50,8 @@ function Install-Packages {
     }
 }
 
-Write-Host "Installing Debian in WSL"
-& wsl --install -d Debian
+Write-Host "Installing Ubuntu in WSL"
+& wsl --install -d Ubuntu
 
 Write-Host "Installing Chocolatey"
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
