@@ -54,14 +54,8 @@ function Install-Packages {
 Write-Host "Installing Debian in WSL"
 & wsl --install -d Debian
 
-$testchoco = powershell choco -v
-if(-not($testchoco)){
-    Write-Host "Seems Chocolatey is not installed, installing now"
-    Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-}
-else{
-    Write-Host "Chocolatey Version $testchoco is already installed"
-}
+Write-Host "Installing Chocolatey"
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 & choco feature enable -n allowGlobalConfirmation
 
