@@ -18,6 +18,8 @@ $DevTools = @(
     'azure-functions-core-tools',
     'microsoftazurestorageexplorer',
     'azure-cosmosdb-emulator',
+    'sql-server-express',
+    'azurestorageemulator',
     'docker-desktop',
     'nodejs',
     'yarn'
