@@ -9,7 +9,6 @@ $GeneralTools = @(
 $DevTools = @(
     'git',
     'jetbrainstoolbox',
-    'jetbrains-rider',
     'dotultimate',
     'vscode',
     'postman',
