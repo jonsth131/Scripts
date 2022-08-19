@@ -62,7 +62,8 @@ Install-Packages $GeneralTools
 
 Write-Host "Installing Dev Tools"
 Install-Packages $DevTools
-npm install azurite -g
+& npm install azurite -g
+& dotnet tool install Nuke.GlobalTool --global
 
 Write-Host "Installing Security Tools"
 Install-Packages $SecurityTools
