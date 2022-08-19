@@ -17,7 +17,6 @@ $DevTools = @(
     'microsoftazurestorageexplorer',
     'azure-cosmosdb-emulator',
     'sql-server-express',
-    'azurestorageemulator',
     'docker-desktop',
     'nodejs',
     'yarn'
@@ -63,6 +62,7 @@ Install-Packages $GeneralTools
 
 Write-Host "Installing Dev Tools"
 Install-Packages $DevTools
+npm install azurite -g
 
 Write-Host "Installing Security Tools"
 Install-Packages $SecurityTools
