@@ -24,7 +24,6 @@ $DevTools = @(
 )
 
 $SecurityTools = @(
-    'OWASP.ZAP',
     'PortSwigger.BurpSuite.Community'
 )
 
