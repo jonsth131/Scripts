@@ -57,8 +57,11 @@ Install-Packages $GeneralTools
 
 Write-Host "Installing Dev Tools"
 Install-Packages $DevTools
-& npm install azurite -g
-& dotnet tool install Nuke.GlobalTool --global
 
 Write-Host "Installing Security Tools"
 Install-Packages $SecurityTools
+
+Write-Host "Installing additional tools"
+$Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")  
+& npm install azurite -g
+& dotnet tool install Nuke.GlobalTool --global
