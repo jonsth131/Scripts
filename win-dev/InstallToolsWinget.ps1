@@ -12,6 +12,7 @@ $DevTools = @(
     'Microsoft.VisualStudioCode',
     'Postman.Postman',
     'Microsoft.dotnet',
+    'Microsoft.DotNet.SDK.6',
     'Microsoft.AzureCLI',
     'Microsoft.AzureFunctionsCoreTools',
     'Microsoft.AzureStorageExplorer',
