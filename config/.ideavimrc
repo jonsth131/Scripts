@@ -27,6 +27,7 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Mappings --------------------------------
+map <leader>z <Action>(ToggleDistractionFreeMode)
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 
 """ Tool windows
@@ -34,16 +35,14 @@ nnoremap <c-p> :action JumpToLastWindow<CR>
 nnoremap <c-x> :action HideAllWindows<CR>
 
 """ Window navigation
-map <c-\> <Action>(SplitVertically)
-map <c--> <Action>(SplitHorizontally)
+map <c-\> <Action>(MoveTabRight)
+map <c--> <Action>(MoveTabDown)
 map <c-=> <Action>(Unsplit)
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 
 map <TAB> <Action>(PreviousTab)
 map <s-TAB> <Action>(NextTab)
-map <leader>en <Action>(EditSourceInNewWindow)
-map <leader>n <Action>(NextWindow)
-map <leader>q <Action>(CloseContent)
+map <leader>q <Action>(CloseEditor)
 map <leader>qa <Action>(CloseAllEditors)
 
 """ Source code editing
@@ -51,17 +50,12 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
-nnoremap zc :action CollapseRegion<CR>
-nnoremap zo :action ExpandRegion<CR>
-nnoremap <leader>zc :action CollapseAllRegions<CR>
-nnoremap <leader>zo :action ExpandAllRegions<CR>
-nnoremap <leader>c :action CommentByLineComment<CR>
-nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>=  :action ReformatCode<CR>
-nnoremap <leader>o :action OptimizeImports<CR>
+map <leader>r <Action>(RenameElement)
+map <Leader>= <Action>(ReformatCode)
+map <leader>o <Action>(OptimizeImports)
 nnoremap <c-r> :action RecentFiles<CR>
-nnoremap <leader>l :action RecentLocations<CR>
-nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
+map <leader>l <Action>(RecentLocations)
+map <leader>h <Action>(LocalHistory.ShowHistory)
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 map <leader>c <Action>(CommentByLineComment)
@@ -70,20 +64,13 @@ map <leader>c <Action>(CommentByLineComment)
 nnoremap <c-/> :action FindInPath<CR>
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <c-f> :action GotoFile<CR>
-nnoremap <leader>u :action FindUsages<CR>
-nnoremap <leader>s :action GotoRelated<CR>
-nnoremap <leader>h :action CallHierarchy<CR>
-nnoremap <leader>b :action ShowNavBar<CR>
+map <leader>u <Action>(FindUsages)
 nnoremap <c-s> :action FileStructurePopup<CR>
 nnoremap gi :action GotoImplementation<CR>
 
 """ Run and debug
-nnoremap ,r :action ContextRun<CR>
-nnoremap ,c :action RunClass<CR>
-nnoremap ,f :action ChooseRunConfiguration<CR>
-nnoremap ,t :action ActivateRunToolWindow<CR>
-nnoremap ,u :action Rerun<CR>
-nnoremap ,f :action RerunFailedTests<CR>
-nnoremap ,b :action ToggleLineBreakpoint<CR>
-nnoremap ,d :action ContextDebug<CR>
-nnoremap ,n :action ActivateDebugToolWindow<CR>
+map ,r <Action>(Run)
+map ,u <Action>(RiderUnitTestRunTreeSplitAction)
+map ,f <Action>(RiderUnitTestRerunBrokenSplitAction)
+map ,b <Action>(ToggleLineBreakpoint)
+map ,d <Action>(Debug)
