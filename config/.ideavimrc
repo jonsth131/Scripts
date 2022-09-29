@@ -45,12 +45,13 @@ map <s-TAB> <Action>(NextTab)
 map <leader>q <Action>(CloseEditor)
 map <leader>qa <Action>(CloseAllEditors)
 
-""" Source code editing
+""" Source code editing  
 vnoremap < <gv
 vnoremap > >gv
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
-map <leader>r <Action>(RenameElement)
+map <leader>rr <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
 map <Leader>= <Action>(ReformatCode)
 map <leader>o <Action>(OptimizeImports)
 nnoremap <c-r> :action RecentFiles<CR>
@@ -70,7 +71,9 @@ nnoremap gi :action GotoImplementation<CR>
 
 """ Run and debug
 map ,r <Action>(Run)
-map ,u <Action>(RiderUnitTestRunTreeSplitAction)
-map ,f <Action>(RiderUnitTestRerunBrokenSplitAction)
-map ,b <Action>(ToggleLineBreakpoint)
+map ,tc <Action>(RiderUnitTestCoverSolutionAction)
+map ,ta <Action>(RiderUnitTestRunSolutionAction)
+map ,tf <Action>(RiderUnitTestRerunBrokenSplitAction)
+map ,p <Action>(ToggleLineBreakpoint)
+map ,b <Action>(BuildSolutionAction) 
 map ,d <Action>(Debug)
