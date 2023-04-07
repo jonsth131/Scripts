@@ -40,10 +40,10 @@ map <c--> <Action>(MoveTabDown)
 map <c-=> <Action>(Unsplit)
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 
-map <TAB> <Action>(PreviousTab)
-map <s-TAB> <Action>(NextTab)
+map <TAB> <Action>(NextTab)
+map <s-TAB> <Action>(PreviousTab)
 map <leader>q <Action>(CloseEditor)
-map <leader>qa <Action>(CloseAllEditors)
+map <leader>aq <Action>(CloseAllEditors)
 
 """ Source code editing  
 vnoremap < <gv
