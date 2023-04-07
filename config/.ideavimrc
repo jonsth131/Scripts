@@ -52,7 +52,7 @@ nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 map <leader>rr <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
-map <Leader>= <Action>(ReformatCode)
+map <Leader>f <Action>(ReformatCode)
 map <leader>o <Action>(OptimizeImports)
 nnoremap <c-r> :action RecentFiles<CR>
 map <leader>l <Action>(RecentLocations)
